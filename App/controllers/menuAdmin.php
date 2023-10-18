@@ -9,7 +9,7 @@ function display_menuAdmin(){
     $role_name = $usersModel->getRole();
     $user_name = $usersModel->getName();
 
-    echo $twig->render('menuAdmin.twig',[
+    echo $twig->render('menus/menuAdmin.twig',[
         'role_name' => $role_name,
         'user_name' => $user_name
     ]);

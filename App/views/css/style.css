@@ -2,13 +2,12 @@
     margin: 0;
     padding: 0;
 }
-
 body {
     background: linear-gradient(to bottom, #000, #05121b);
     color: white;
 }
 
-/* Headr commun */
+/* Header commun */
 header {
     display: flex;
     justify-content: space-between;
@@ -44,12 +43,15 @@ header nav a {
 header nav a:hover {
     background-color: rgba(255, 255, 255, 0.5);
 }
+
+/* Header de log in */
 .logIn h1 {
     width: 50%;
     text-align: center;
     justify-content: center;
 }
 
+/* Main par défaut */
 main {
     display: flex;
     flex-wrap: wrap;
@@ -57,19 +59,17 @@ main {
     width: 100%;
     min-height: 60vh;
     color: white;
-    /* background-image: url('/images/background-etoile.jpeg');
+    /* background-image: url('/App/views/images/background-etoile.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center; */
 }
-
 main h2 {
     width: 100%;
     margin: 3vh 0;
     text-align: center;
     font-size: 2rem;
 }
-
 main article > p {
     display: flex;
 }
@@ -79,11 +79,9 @@ main article {
     flex-wrap: wrap;
     width: 45%;
 }
-
 main article img {
     width: 100%;
 }
-
 main article div {
     display: flex;
     flex-wrap: wrap;
@@ -93,12 +91,10 @@ main article div {
     padding: 1%;
     margin: 2vh 0;
 }
-
 main article div h3 {
     margin-bottom: 10px;
     width: 100%;
 }
-
 main article div p {
     margin-bottom: 5px;
     width: 80%;
@@ -132,7 +128,8 @@ main article div p {
 .menuAdmin nav a:hover {
     background-color: rgba(255, 255, 255, 0.5);
 }
-/* Pages updateUser / updateMission */
+
+/* Pages updateUser / updateMission / Rôles */
 .menuAdmin article {
     display: flex;
     flex-wrap: wrap;
@@ -165,4 +162,55 @@ footer {
     margin-top: 10vh;
     background: linear-gradient(to right, #05121b, #061b26);
     color: white;
+}
+
+/* Form */
+main form {
+    display: flex;
+    width: 100%;
+}
+main .addForm {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    padding: 2%;
+    margin: 2vh auto;
+    border: 1px solid white;
+    border-radius: 5px;
+    background: linear-gradient(to right, #05121b, #061b26);
+}
+main form label {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 1vh;
+    font-size: 1.2em;
+    color: white;
+}
+main form input {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 1vh 0;
+    padding: 1vh;
+    border: none;
+    border-radius: 5px;
+}
+main form input[type="submit"],
+main article form button[type="submit"]
+{
+    width: 30%;
+    margin: 2vh auto;
+    padding: 2vh;
+    justify-content: center;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #003366;
+    color: white;
+}
+main form input[type="submit"]:hover,
+main article form button[type="submit"]:hover
+{
+    background-color: #0055a5;
 }

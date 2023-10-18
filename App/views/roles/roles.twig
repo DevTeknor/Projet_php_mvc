@@ -1,6 +1,6 @@
 {% include 'header.twig' %}
 
-<main>
+<main class='menuAdmin'>
     <h2>Liste des rôles</h2>
     {% for role in roles %}
         <article>
@@ -13,8 +13,8 @@
         </article>
     {% endfor %}
 
-    <h3>Créer un rôle</h3>
-    <form action="/menuAdmin/sendAddRole" method="post">
+    <h2>Créer un rôle</h2>
+    <form action="/menuAdmin/sendAddRole" method="post" class="addForm">
         <label for="add_role_name">Nom du rôle :</label>
         <input id="add_role_name" name="add_role_name" required><br><br>
 

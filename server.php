@@ -94,8 +94,9 @@ function route_request(){
         // $image = require_once('./App/views/images/logoOrbitWatch.png');
     //     return $image;
     // }
-
-    echo '<h1>404 NOT FOUND</h1>';
+    else {
+        echo '<h1>404 NOT FOUND</h1>';
+    }
 }
 
 route_request();

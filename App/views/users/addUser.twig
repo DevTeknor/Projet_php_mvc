@@ -1,7 +1,8 @@
 {% include 'header.twig' %}
 
 <main>
-    <form action="/menuAdmin/sendAddUser" method="post">
+    <h2>Ajouter un utilisateur</h2>
+    <form action="/menuAdmin/sendAddUser" method="post" class="addForm">
         <label for="add_user_name">Nom d'utilisateur :</label>
         <input id="add_user_name" name="add_user_name" required><br><br>
 
