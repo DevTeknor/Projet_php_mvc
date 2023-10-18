@@ -54,3 +54,9 @@ function addUser(string $add_user_name, string $add_user_mdp){
         header('Location: /menuModerateur/addUser');
     }
 }
+
+function inscription(string $user_name, string $user_mdp){
+    $usersModel = new UsersModel();
+    $usersModel->inscription($user_name, $user_mdp);
+    header('Location: /homepage');
+}

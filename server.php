@@ -9,6 +9,7 @@ require('./App/controllers/logIn.php');
 require('./App/controllers/homePage.php');
 require('./App/controllers/roles.php');
 
+//Le if est là par sécurité pour s'assurer que la session n'est pas encore lancée.
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
@@ -29,6 +30,10 @@ function route_request(){
         $_SESSION['user_name'] = $_POST['user_name'];
         // Puis check des logs de connexion
         check_logs($_POST['user_name'],$_POST['user_mdp']);
+    }
+    else if ($route === '/inscription'){
+        $_SESSION['user_name'] = $_POST['user_name'];
+        inscription($_POST['user_name'],$_POST['user_mdp']);
     }
     else if ($route === '/homepage'){
         display_homePage();

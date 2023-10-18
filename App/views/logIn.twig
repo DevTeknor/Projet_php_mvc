@@ -11,6 +11,16 @@
 
         <input type="submit" value="Connexion">
     </form>
+    <h2>Inscription</h2>
+    <form action="/inscription" method="post" class="addForm">
+        <label for="user_name">Nom d'utilisateur :</label>
+        <input id="user_name" name="user_name" required><br><br>
+
+        <label for="user_mdp">Mot de passe :</label>
+        <input id="user_mdp" name="user_mdp" type="password" required><br><br>
+
+        <input type="submit" value="S'inscrire">
+    </form>
 </main>
 
 {% include 'footer.php' %}

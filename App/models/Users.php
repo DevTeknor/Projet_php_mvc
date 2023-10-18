@@ -1,6 +1,5 @@
 <?php 
 
-
 class UsersModel {
     private $pdo;
 
@@ -93,5 +92,22 @@ class UsersModel {
             ':mdp' => $add_user_mdp,
             ':date' => $add_date
         ]);
+    }
+
+    public function inscription(string $user_name, string $user_mdp){
+        // Ajout du nouvel utilisateur avec addUser()
+        $this->addUser($user_name, $user_mdp);
+
+        // Récupération de l'ID de ce nouvel user
+        $id = $this->pdo->lastInsertId();
+        //Cette 2eme version ne fonctionnait que pour un seul ajout avant de créer un bug
+        // $query = "SELECT id_user FROM users WHERE user_name = :name";
+        // $request = $this->pdo->prepare($query);
+        // $id = $request->execute([':name' => $user_name]);
+
+        // Affectation du rôle visiteur par défaut
+        $query = "INSERT INTO affecter(id_user,id_role) VALUES (:id,1)";
+        $request = $this->pdo->prepare($query);
+        $id = $request->execute([':id' => $id]);
     }
 }
