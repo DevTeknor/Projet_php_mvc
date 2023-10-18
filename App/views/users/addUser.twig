@@ -1,0 +1,15 @@
+{% include 'header.twig' %}
+
+<main>
+    <form action="/menuAdmin/sendAddUser" method="post">
+        <label for="add_user_name">Nom d'utilisateur :</label>
+        <input id="add_user_name" name="add_user_name" required><br><br>
+
+        <label for="add_user_mdp">Mot de passe :</label>
+        <input id="add_user_mdp" name="add_user_mdp" required><br><br>
+
+        <input type="submit" value="Créer">
+    </form>
+</main>
+
+{% include 'footer.php' %}

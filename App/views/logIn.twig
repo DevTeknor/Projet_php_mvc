@@ -1,0 +1,16 @@
+{% include 'headerLogIn.twig' %}
+
+<main>
+    <h2>Connexion</h2>
+    <form action="login/check" method="post">
+        <label for="user_name">Nom d'utilisateur :</label>
+        <input id="user_name" name="user_name" required><br><br>
+
+        <label for="user_mdp">Mot de passe :</label>
+        <input id="user_mdp" name="user_mdp" required><br><br>
+
+        <input type="submit" value="Connexion">
+    </form>
+</main>
+
+{% include 'footer.php' %}

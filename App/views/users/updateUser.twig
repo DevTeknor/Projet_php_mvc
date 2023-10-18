@@ -1,0 +1,23 @@
+{% include 'header.twig' %}
+
+<main class="menuAdmin">
+    <h2>Modifier des utilisateurs</h2>
+    {% for user in users %}
+        <article>
+            <p>Nom d'utilisateur : {{ user.user_name }}
+            <span>ID User : {{ user.id_user }}</span></p>
+            <p>Mot de Passe : {{ user.user_mdp }}</p>
+            <p>Rôle : {{ user.role_name }}</p>
+            <p>Nombre de publications : {{ user.user_publication_number }}</p>
+            <p>Date de création de compte : {{ user.user_acount }}</p>
+            <form action="/menuAdmin/deleteUser" method="post">
+                <input type="hidden" name="id_user" value="{{ user.id_user }}">
+                <button type="submit">Supprimer</button>
+            </form>
+        </article>
+    {% endfor %}
+</main>
+
+{% include 'footer.php' %}
+
+

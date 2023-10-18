@@ -1,0 +1,22 @@
+{% include 'header.twig' %}
+
+<main class="menuAdmin">
+    <h2>Modifier des missions</h2>
+    {% for mission in missions %}
+        <article>
+            <h3>{{ mission.mission_name }}</h3>
+            <p>Objectif : {{ mission.mission_obj }}</p>
+            <p>Date de lancement : {{ mission.mission_date }}</p>
+            <p>Agence : {{ mission.mission_agency }}</p>
+            <p>Mis en ligne le {{ mission.mission_publication_date }} <span> Ajouté par : {{ mission.mission_publication }}</span></p>
+            <form action="/menuAdmin/deleteMission" method="post">
+                <input type="hidden" name="id_mission" value="{{ mission.id_mission }}">
+                <button type="submit">Supprimer</button>
+            </form>
+        </article>
+    {% endfor %}
+</main>
+
+{% include 'footer.php' %}
+
+

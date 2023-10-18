@@ -1,0 +1,25 @@
+{% include 'header.twig' %}
+
+<main>
+    <h2>Liste des rôles</h2>
+    {% for role in roles %}
+        <article>
+            <p>ID Rôle : {{ role.id_role }}
+            <span>Nom du rôle : {{ role.role_name }}</span></p>
+            <form action="/menuAdmin/deleteRole" method="post">
+                <input type="hidden" name="id_role" value="{{ role.id_role }}">
+                <button type="submit">Supprimer</button>
+            </form>
+        </article>
+    {% endfor %}
+
+    <h3>Créer un rôle</h3>
+    <form action="/menuAdmin/sendAddRole" method="post">
+        <label for="add_role_name">Nom du rôle :</label>
+        <input id="add_role_name" name="add_role_name" required><br><br>
+
+        <input type="submit" value="Créer">
+    </form>
+</main>
+
+{% include 'footer.php' %}

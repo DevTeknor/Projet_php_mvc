@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <title>OrbitWatch</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="http://localhost:8000/App/views/css/style.css" /> -->
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+</head>
+
+{# Solution trouvée pour intégrer le fichier CSS sans passer par la balise link ou autre méthode #}
+<style>
+    {% include 'css/style.css' %}
+</style>
+
+<body>
+    <header>
+        <a href="/homepage">
+            <img src="images/logoOrbitWatch.png" alt="logo">
+        </a>
+        <a href="/homepage">
+            <h1>OrbitWatch</h1>
+        </a>
+        <nav>
+            <p>Bonjour {{ user_name }}</p>
+            <a href="/menu{{ role_name }}">Menu {{ role_name }}</a>
+            <a href="/newlogin">Déconnexion</a>
+        </nav>
+    </header>

@@ -1,0 +1,16 @@
+{% include 'header.twig' %}
+
+<main>
+    <h2>Affecter un rôle</h2>
+    <form action="/menuAdmin/sendAffectRole" method="post">
+        <label for="affect_id_user">ID Utilisateur :</label>
+        <input id="affect_id_user" name="affect_id_user" required><br>
+
+        <label for="affect_id_role">ID Rôle :</label>
+        <input id="affect_id_role" name="affect_id_role" required><br><br>
+
+        <input type="submit" value="Affecter">
+    </form>
+</main>
+
+{% include 'footer.php' %}

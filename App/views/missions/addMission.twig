@@ -1,0 +1,25 @@
+{% include 'header.twig' %}
+
+<main>
+    <h2>Ajouter une mission</h2>
+    <form action="/menuAdmin/sendAddMission" method="post">
+        <label for="add_mission_name">Nom :</label>
+        <input id="add_mission_name" name="add_mission_name" required><br>
+
+        <label for="add_mission_obj">Objectif :</label>
+        <input id="add_mission_obj" name="add_mission_obj" required><br>
+
+        <label for="add_mission_date">Date (YYYY-MM-JJ hh:mm:ss) :</label>
+        <input id="add_mission_date" name="add_mission_date" required><br>
+
+        <label for="add_mission_agency">Agence :</label>
+        <input id="add_mission_agency" name="add_mission_agency" required><br>
+
+        {# <label for="add_mission_publication">Publication :</label>
+        <input id="add_mission_publication" name="add_mission_publication" required><br><br> #}
+
+        <input type="submit" value="Ajouter">
+    </form>
+</main>
+
+{% include 'footer.php' %}

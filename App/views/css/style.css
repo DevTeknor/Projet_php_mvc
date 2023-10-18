@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to bottom, #000, #05121b);
+    color: white;
+}
+
+/* Headr commun */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 98%;
+    height: 6vh;
+    padding: 2vh 1%;
+    background: linear-gradient(to right, #05121b, #061b26);
+    color: white;
+}
+header a {
+    text-decoration: none;
+    color: white;
+}
+header nav {
+    display: flex;
+    width: 40%;
+    justify-content: space-evenly;
+}
+header nav p {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+}
+header nav a {
+    display: flex;
+    height: 10vh;
+    align-items: center;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: white;
+}
+header nav a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.logIn h1 {
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    min-height: 60vh;
+    color: white;
+    /* background-image: url('/images/background-etoile.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+}
+
+main h2 {
+    width: 100%;
+    margin: 3vh 0;
+    text-align: center;
+    font-size: 2rem;
+}
+
+main article > p {
+    display: flex;
+}
+
+main article {
+    display: flex;
+    flex-wrap: wrap;
+    width: 45%;
+}
+
+main article img {
+    width: 100%;
+}
+
+main article div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 98%;
+    background: linear-gradient(to right, #05121b, #061b26);
+    border: 1px solid white;
+    padding: 1%;
+    margin: 2vh 0;
+}
+
+main article div h3 {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+main article div p {
+    margin-bottom: 5px;
+    width: 80%;
+}
+
+/* Page menuAdmin */
+.menuAdmin nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 2vh;
+}
+.menuAdmin h2 {
+    margin-top: 10vh;
+}
+.menuAdmin nav a {
+    height: 5vh;
+    width: 20%;
+    margin: 1vh 5%;
+    padding: 4vh 4%;
+    font-size: 1.2em;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 5px;
+    background: linear-gradient(to right, #05121b, #061b26);
+}
+.menuAdmin nav a:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+/* Pages updateUser / updateMission */
+.menuAdmin article {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 80%;
+    background: linear-gradient(to right, #05121b, #061b26);
+    border: 1px solid white;
+    padding: 1%;
+    margin: 5vh 0 0;
+}
+.menuAdmin article p {
+    width: 98%;
+}
+.menuAdmin article span {
+    position: absolute;
+    right: 3%;
+    top: 2vh;
+}
+
+/* Footer commun */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 20vh;
+    left: 0;
+    bottom: 0;
+    margin-top: 10vh;
+    background: linear-gradient(to right, #05121b, #061b26);
+    color: white;
+}

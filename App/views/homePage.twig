@@ -1,0 +1,26 @@
+{% include 'header.twig' %}
+
+<main>  
+    <article>
+        <h2>A propos</h2>
+        <img src="" alt="image de couv">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem assumenda vitae dolorum, quisquam perspiciatis autem cum eos beatae ea minus fugit, ut possimus! Tempore id veritatis soluta architecto, sapiente, nulla velit deserunt, magnam dignissimos earum dolorum ratione ex eveniet! Velit pariatur dignissimos doloribus minima quo rem explicabo non repellendus porro voluptatem quos alias culpa, obcaecati esse maiores iusto eaque architecto accusantium aliquid debitis tempore aspernatur, cumque officia vel! Magnam rerum ab iste accusamus repellendus, magni fugit, adipisci harum ad, sapiente corporis atque ex nam in numquam dignissimos expedita eligendi nihil delectus obcaecati. Veritatis quaerat, eaque nemo voluptatem sunt vitae commodi?
+        </p>
+    </article>
+
+    <article>
+        <h2>Les missions passées et à venir</h2>
+        {% for mission in missions %}
+            <div>
+                <h3>{{ mission.mission_name }}</h3>
+                <p>Objectif : {{ mission.mission_obj }}</p>
+                <p>Date de lancement : {{ mission.mission_date }}</p>
+                <p>Agence : {{ mission.mission_agency }}</p>
+                <p>Mis en ligne le {{ mission.mission_publication_date }} <span> par : {{ mission.mission_publication }}</span></p>
+            </div>
+        {% endfor %}
+    </article>
+</main>
+
+{% include 'footer.php' %}
